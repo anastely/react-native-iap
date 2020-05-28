@@ -128,12 +128,12 @@ class Page extends Component {
         if (receipt) {
           try {
             // if (Platform.OS === 'ios') {
-            //   finishTransactionIOS(purchase.transactionId);
+            //  await finishTransactionIOS(purchase.transactionId);
             // } else if (Platform.OS === 'android') {
             //   // If consumable (can be purchased again)
-            //   consumePurchaseAndroid(purchase.purchaseToken);
+            //  await consumePurchaseAndroid(purchase.purchaseToken);
             //   // If not consumable
-            //   acknowledgePurchaseAndroid(purchase.purchaseToken);
+            //  await acknowledgePurchaseAndroid(purchase.purchaseToken);
             // }
             const ackResult = await finishTransaction(purchase);
           } catch (ackErr) {
